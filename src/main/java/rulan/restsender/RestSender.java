@@ -1,4 +1,4 @@
-package com;
+package rulan.restsender;
 
 import com.sun.jersey.api.client.Client;
 import com.sun.jersey.api.client.ClientResponse;
@@ -39,11 +39,8 @@ public class RestSender {
     }
 
 
-    public void send(JSONObject jsonObject) {
-        ClientResponse clientResponse = client.resource(url.toString()).type("application/json").post(ClientResponse.class, jsonObject.toString());
-        int status = clientResponse.getStatus();
-        String string = clientResponse.getEntity(String.class);
-        System.out.println(status + " " + string);
+    public ClientResponse send(JSONObject jsonObject) {
+        return client.resource(url.toString()).type("application/json").post(ClientResponse.class, jsonObject.toString());
     }
 
 }

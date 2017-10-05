@@ -1,4 +1,4 @@
-package com;
+package rulan.restsender;
 
 import javax.net.ssl.X509TrustManager;
 import java.security.cert.CertificateException;

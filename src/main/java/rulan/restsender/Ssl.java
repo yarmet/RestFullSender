@@ -1,4 +1,4 @@
-package com;
+package rulan.restsender;
 
 import javax.net.ssl.SSLContext;
 import javax.net.ssl.TrustManager;
